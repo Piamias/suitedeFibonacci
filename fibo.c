@@ -12,10 +12,14 @@ int main()
 	scanf("%d",&n);
 	if (n > 0)
 	{
-	n = fibo(n);
-	printf("\n%d\n",n);
+		n = fibo(n);
+		printf("\n%d\n",n);
 	}
-	else
+	else if(n == 0)
+	{
+		printf("\n%d\n" ,n);	
+	}	
+	else	
 	{
 		printf("Wrong format ! Please enter a positive number\n");
 	}	
@@ -37,13 +41,6 @@ int fibo(int n)
 			sequence[i-1] = sequence[i];	
 			n --;
 		}	
-	}	
-	else
-	{
-		if (n == 0)
-		{
-			i = 0;
-		}		
 	}
 	n = sequence[i];
 	return n;	
