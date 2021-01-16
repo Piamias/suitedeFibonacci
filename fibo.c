@@ -10,8 +10,15 @@ int main()
 	n = 0;
 	printf("Enter the place number in Fibonnaci sequence : \n");
 	scanf("%d",&n);
+	if (n > 0)
+	{
 	n = fibo(n);
 	printf("\n%d\n",n);
+	}
+	else
+	{
+		printf("Wrong format ! Please enter a positive number\n");
+	}	
 	return 0;
 }
 
