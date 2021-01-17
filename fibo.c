@@ -7,20 +7,23 @@ int main(int argc, char **argv)
 {
 	(void)argc; 
 	int n;
-
-	n = atoi(argv[1]);
-	if (n > 0)
+	
+	if (argv[1] != NULL)
 	{		
-	n = fibo(n);
-	printf("\n%d\n",n);
-	}
-	else if(n == 0)
-	{
-		printf("\n%d\n" ,n);	
-	}	
-	else	
-	{
-		printf("Wrong format ! Please enter a positive number\n");
+		n = atoi(argv[1]);
+		if (n > 0)
+		{		
+		n = fibo(n);
+		printf("\n%d\n",n);
+		}
+		else if(n == 0)
+		{
+			printf("\n%d\n" ,n);	
+		}	
+		else	
+		{
+			printf("Wrong format ! Please enter a positive number\n");
+		}
 	}	
 	return 0;
 }
