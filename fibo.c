@@ -3,17 +3,16 @@
 
 int fibo(int n);
 
-int main()
+int main(int argc, char **argv)
 {
+	(void)argc; 
 	int n;
 
-	n = 0;
-	printf("Enter the place number in Fibonnaci sequence : \n");
-	scanf("%d",&n);
+	n = atoi(argv[1]);
 	if (n > 0)
-	{
-		n = fibo(n);
-		printf("\n%d\n",n);
+	{		
+	n = fibo(n);
+	printf("\n%d\n",n);
 	}
 	else if(n == 0)
 	{
